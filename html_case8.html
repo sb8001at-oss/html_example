@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ケース8: 動的生成コンテンツ</title>
+</head>
+<body>
+    <h1>リアルタイム株価（ダミー）</h1>
+    <!-- 読み込み時は空っぽの要素 -->
+    <div id="dynamic-data">読み込み中...</div>
+
+    <script>
+        // 2秒後にJavaScriptがデータを上書きする
+        setTimeout(() => {
+            const container = document.getElementById('dynamic-data');
+            container.innerHTML = `
+                <ul>
+                    <li>銘柄A: <span class="up">¥4,500 (+120)</span></li>
+                    <li>銘柄B: <span class="down">¥1,230 (-45)</span></li>
+                </ul>
+            `;
+        }, 2000);
+    </script>
+</body>
+</html>

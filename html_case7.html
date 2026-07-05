@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ケース7: ログイン画面</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>会員ログイン</h2>
+        <form action="/login-api" method="POST">
+            <div class="form-group">
+                <label for="user">ユーザー名:</label>
+                <input type="text" id="user" name="username" placeholder="example_user">
+            </div>
+            <div class="form-group">
+                <label for="pass">パスワード:</label>
+                <input type="password" id="pass" name="password">
+            </div>
+            <input type="hidden" name="csrf_token" value="xyz123abc789">
+            <button type="submit">ログイン</button>
+        </form>
+    </div>
+</body>
+</html>
