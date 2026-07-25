@@ -2,143 +2,39 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 Rを使ってみよう - CSS & Attribute Enhanced</title>
-    <style>
-        /* 全体スタイル */
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* コンテナ */
-        .container {
-            width: 100%;
-            max-width: 800px;
-        }
-
-        /* ヘッダー */
-        .header-banner {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: #ffffff;
-            padding: 28px 32px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-title {
-            font-size: 28px;
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        /* 記事カード */
-        .article-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .article-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .card-header {
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 12px;
-            margin-bottom: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .card-title {
-            font-size: 18px;
-            color: #0f172a;
-            margin: 0;
-            border-left: 4px solid #3b82f6;
-            padding-left: 12px;
-            font-weight: 600;
-        }
-
-        .card-date {
-            font-size: 13px;
-            color: #64748b;
-            margin: 0;
-            background-color: #f1f5f9;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: 500;
-        }
-
-        .card-body {
-            font-size: 15px;
-            color: #334155;
-            margin: 0;
-            line-height: 1.7;
-        }
-
-        /* インラインコードスタイル */
-        .code-inline {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            background-color: #eff6ff;
-            color: #1d4ed8;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 14px;
-            border: 1px solid #bfdbfe;
-        }
-    </style>
+    <title>ケース3: テーブルデータ（オブジェクト）</title>
 </head>
 <body>
-
-    <!-- メインコンテナ (id, class, data属性を付与) -->
-    <div id="main-wrapper" class="container" data-page-type="tutorial">
-
-        <!-- 大見出しブロック -->
-        <div class="header-banner" id="banner-section">
-            <h1 class="main-title" id="page-heading">2 Rを使ってみよう</h1>
-        </div>
-
-        <!-- 記事カード 1 -->
-        <div class="article-card" id="article-1" data-article-id="101" data-category="r-console">
-            <div class="card-header">
-                <h2 class="card-title" id="title-1">【重要】コンソールでの実行</h2>
-                <p class="card-date" id="date-1">2026-07-05</p>
-            </div>
-            <p class="card-body" id="body-1">
-                Rを起動するとプロンプト（<span class="code-inline">&gt;</span>）が表示されます。ここに計算式を入力してEnterを押すことで実行されます。
-            </p>
-        </div>
-
-        <!-- 記事カード 2 -->
-        <div class="article-card" id="article-2" data-article-id="102" data-category="r-script">
-            <div class="card-header">
-                <h2 class="card-title" id="title-2">スクリプトの保存</h2>
-                <p class="card-date" id="date-2">2026-07-04</p>
-            </div>
-            <p class="card-body" id="body-2">
-                何度も使うコードはスクリプトファイル（<span class="code-inline">.R</span>）として保存しておくと、後から一括で再実行できます。
-            </p>
-        </div>
-
-    </div>
-
+    <h1>3 オブジェクトの種類</h1>
+    <table border="1" id="sales-table">
+        <thead>
+            <tr>
+                <th>章番号</th>
+                <th>概念名</th>
+                <th>主な用途</th>
+                <th>初心者難易度</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>オブジェクト</td>
+                <td>データの格納先</td>
+                <td>低</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>変数</td>
+                <td>値へのラベル付け</td>
+                <td>低</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>クラス</td>
+                <td>オブジェクトの型定義</td>
+                <td>中</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
